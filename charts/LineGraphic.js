@@ -171,3 +171,31 @@ export function LineGraphic({ title, maxX, maxY, dataPoints, width = "100%", hei
         </div>
     );
 }
+
+//Usage
+
+    const temperatureData = [
+        { x: 0, y: 2 },
+        { x: 1, y: 3 },
+        { x: 2, y: 8 },
+        { x: 3, y: 5 },
+        { x: 4, y: 10 },
+        { x: 5, y: 7 },
+        { x: 6, y: 7 },
+        { x: 7, y: 2 },
+        { x: 8, y: 3 },
+        { x: 9, y: 3 },
+        { x: 10, y: 1 },
+        { x: 11, y: 2 },
+        { x: 12, y: 1 },
+        { x: 13, y: 1 },
+        { x: 14, y: 1 },
+    ];
+
+                    <LineGraphic 
+                        title={"Precipitation chance"}
+                        maxX={4} maxY={10}
+                        dataPoints={temperatureData}
+                        xAxis={["00", "06", "12", "18", "24"]}
+                        yAxis={["0%","25%","50%","75%","100%"]}
+                    />
